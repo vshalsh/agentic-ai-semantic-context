@@ -211,8 +211,6 @@ That is the boundary between a useful AI demonstration and an enterprise data ar
 
 ---
 
-**Suggested Medium tags:** Agentic AI, Data Engineering, Enterprise Architecture, Model Context Protocol, Data Governance
-
 ### Sources and verification
 
 1. Neo4j, *Context Engine Launches to Create AI Knowledge Layer*, October 20, 2026 — private preview: https://neo4j.com/press-releases/neo4j-context-engine/
