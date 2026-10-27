@@ -66,7 +66,3 @@ A production MCP implementation also needs authenticated transport, protocol-con
 The sample is intentionally small enough to inspect. It demonstrates where the trust boundary belongs, rather than pretending that an in-memory example is enterprise infrastructure.
 
 The key distinction: **tool connectivity enables action; authorization legitimizes it**.
-
----
-
-*This is a reconstructed standalone article based on the original topic, not a recovered verbatim manuscript.*
