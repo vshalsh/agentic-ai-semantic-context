@@ -162,6 +162,5 @@ The broader lesson is architectural: model reasoning, orchestration, authorizati
 
 ---
 
-**Suggested Medium tags:** Agentic AI, Enterprise Architecture, Model Context Protocol, AI Security, Python
 
 **Fact-check note:** The cited announcements and incident report are primary sources dated October 19–20, 2026. The architecture is an independent engineering interpretation. The offline demonstration and unit test were executed locally; the optional OpenAI API path was not live-tested. No real ERP, payments, or production identity system was used.
