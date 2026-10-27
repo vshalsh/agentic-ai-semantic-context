@@ -159,8 +159,3 @@ Durability and security must be designed together. A workflow that resumes safel
 The broader lesson is architectural: model reasoning, orchestration, authorization, and audit are different responsibilities. Combining them inside one privileged process may accelerate a prototype, but it also makes the system's safety depend on the very component it is supposed to supervise.
 
 **The best agent is not one that promises to obey its guardrails. It is one whose execution environment keeps those guardrails effective even when the agent makes a mistake.**
-
----
-
-
-**Fact-check note:** The cited announcements and incident report are primary sources dated October 19–20, 2026. The architecture is an independent engineering interpretation. The offline demonstration and unit test were executed locally; the optional OpenAI API path was not live-tested. No real ERP, payments, or production identity system was used.
