@@ -10,8 +10,8 @@ Each article is designed to stand alone. Source code is educational and is not p
 
 | Article | Topic | Implementation |
 |---|---|---|
-| 001 | Agent identity, delegated authority, and governance | Editorial article; companion pending |
-| 002 | Governed MCP runtime: orchestrator, tool calling, scoped authorization, audit | Python example; source upload pending |
+| 001 | Agent identity, delegated authority, and governance | [Reconstructed article](articles/001/article.md) + [Python demo](articles/001/demo.py) + [tests](articles/001/test_demo.py) |
+| 002 | Governed MCP runtime: orchestrator, tool calling, scoped authorization, audit | [Reconstructed article](articles/002/article.md) + [Python demo](articles/002/demo.py) + [tests](articles/002/test_demo.py) |
 | 003 | Independent agent oversight, signed task permissions, durable execution | [Draft](articles/003/article.md); source upload pending |
 | 004 | Governed semantic context: metric definitions, tenant isolation, lineage | [Draft](articles/004/article.md); source upload pending |
 
