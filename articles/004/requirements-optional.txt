@@ -1,0 +1,2 @@
+# The committed deterministic example uses Python's standard library only.
+# No external packages are required.
