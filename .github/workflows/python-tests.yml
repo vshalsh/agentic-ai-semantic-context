@@ -1,4 +1,4 @@
-name: Python example tests
+name: Python code labs
 on:
   push:
   pull_request:
@@ -7,12 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        article: ['001', '002', '003', '004']
+        python-version: ['3.10', '3.12']
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-      - name: Run tests
-        working-directory: articles/${{ matrix.article }}
-        run: python -m unittest -v test_demo.py
+          python-version: ${{ matrix.python-version }}
+      - name: Run all independent code labs
+        run: python scripts/run_all_tests.py
