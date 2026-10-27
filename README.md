@@ -1,48 +1,44 @@
-# Enterprise Agentic AI — Architecture & Working Examples
+# Enterprise Agentic AI — Architecture and Working Examples
 
-A growing collection of independent, technical articles and companion implementations on enterprise Agentic AI architecture.
+Four independent technical articles with executable Python demonstrations and automated tests.
 
 **Author:** Vishal Sharma
 
-Each article is designed to stand alone. Source code is educational and is not production-ready without appropriate security and operational controls.
-
-## Articles
-
-| Article | Topic | Implementation |
+| Article | Subject | Links |
 |---|---|---|
-| 001 | Agent identity, delegated authority, and governance | [Reconstructed article](articles/001/article.md) + [Python demo](articles/001/demo.py) + [tests](articles/001/test_demo.py) |
-| 002 | Governed MCP runtime: orchestrator, tool calling, scoped authorization, audit | [Reconstructed article](articles/002/article.md) + [Python demo](articles/002/demo.py) + [tests](articles/002/test_demo.py) |
-| 003 | Independent agent oversight, signed task permissions, durable execution | [Draft](articles/003/article.md); source upload pending |
-| 004 | Governed semantic context: metric definitions, tenant isolation, lineage | [Draft](articles/004/article.md); source upload pending |
+| 001 | Delegated authority and revocation | [Article](articles/001/article.md) · [Code](articles/001/demo.py) · [Tests](articles/001/test_demo.py) |
+| 002 | Governed MCP-style tool calling and authorization | [Article](articles/002/article.md) · [Code](articles/002/demo.py) · [Tests](articles/002/test_demo.py) |
+| 003 | Independent oversight and agent kill switches | [Article](articles/003/article.md) · [Code](articles/003/agent.py) · [Tests](articles/003/test_demo.py) |
+| 004 | Semantic context, tenant isolation, metric lineage | [Article](articles/004/article.md) · [Code](articles/004/agent.py) · [Tests](articles/004/test_demo.py) |
 
-## Repository layout
+## Quick start
 
-```text
-articles/
-  001/
-  002/
-  003/
-  004/
+Python 3.10+ is recommended. All committed demos use the standard library.
+
+```bash
+python articles/001/demo.py
+python articles/002/demo.py
+python articles/003/agent.py
+python articles/004/agent.py
 ```
 
-Each numbered directory is intended to contain its article and, where available, executable code, tests, and a local README.
+Run tests from within each article directory:
 
-## Principles
+```bash
+cd articles/001 && python -m unittest -v test_demo.py
+cd ../002 && python -m unittest -v test_demo.py
+cd ../003 && python -m unittest -v test_demo.py
+cd ../004 && python -m unittest -v test_demo.py
+```
 
-- Agent reasoning does not replace enterprise authorization.
-- MCP connectivity does not automatically establish access rights.
-- Business definitions and tenant boundaries belong in trusted services.
-- Audit evidence must be independent of model-generated explanations.
-- Examples should include runnable tests and explicit limitations.
+GitHub Actions runs the same test suites on pushes and pull requests.
 
-## Publishing
+## Scope and provenance
 
-Articles are reviewed and published separately on Medium. No Medium publication is performed by this repository.
+Articles 001 and 002 are **reconstructed manuscripts**, not recovered verbatim originals. Articles 003 and 004 preserve the available Markdown drafts. The committed 003/004 Python implementations are **simplified self-contained companions** and are not byte-identical to the previously generated downloadable ZIP.
 
-## Security
+The tool examples illustrate MCP-style boundaries, but **are not full MCP protocol servers**. They intentionally do not require cloud credentials, paid APIs, or external databases. Do not interpret them as production-ready enterprise identity, security, audit, or distributed transaction systems.
 
-Do not commit API keys, credentials, production data, or environment files. The demos are intentionally simplified and should not be deployed as production services without review.
+## Security and licensing
 
-## License
-
-No open-source license has been selected yet. All rights reserved unless a license is added.
+Never commit API keys, production records, or credentials. No open-source license has been selected; all rights reserved until one is added.
