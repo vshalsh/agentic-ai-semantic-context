@@ -218,5 +218,3 @@ That is the boundary between a useful AI demonstration and an enterprise data ar
 3. Interact Software, *Interact MCP*, October 26, 2026 — full availability planned later in 2026: https://rss.globenewswire.com/news-release/2026/10/26/3388061/0/en/interact-brings-700-intranet-capabilities-to-enterprise-ai-assistants-with-interact-mcp.html
 4. MCP tools specification, 2026-07-28: https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/specification/2026-07-28/server/tools.mdx
 5. OpenAI, *Function calling documentation*: https://developers.openai.com/api/docs/guides/function-calling
-
-**Fact-check note:** Product capabilities and availability are attributed to vendor primary sources, not independently benchmarked. The sample records are fictional. The offline implementation and four tests were executed locally. The optional live LLM path was not tested. No enterprise data or production credentials were used.
