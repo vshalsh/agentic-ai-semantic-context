@@ -66,7 +66,3 @@ No cloud service or API key is required. All data is fictional.
 The example uses in-memory state and does not implement cryptographic tokens, real identity federation, distributed revocation, or durable audit storage. Those require production infrastructure and threat modeling.
 
 The general principle remains: **the agent may request an action, but it must not be the final authority for that action**.
-
----
-
-*This is a reconstructed standalone article based on the original topic, not a recovered verbatim manuscript.*
