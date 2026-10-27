@@ -1,44 +1,74 @@
-# Enterprise Agentic AI — Architecture and Working Examples
+# Enterprise Agentic AI — Architecture, Articles & Executable Labs
 
-Four independent technical articles with executable Python demonstrations and automated tests.
+**Four technical articles, four independent runnable code labs, automated tests, and an MIT license.**
 
-**Author:** Vishal Sharma
+Author: Vishal Sharma
 
-| Article | Subject | Links |
+## Read the articles
+
+| # | Article | Article Markdown |
 |---|---|---|
-| 001 | Delegated authority and revocation | [Article](articles/001/article.md) · [Code](articles/001/demo.py) · [Tests](articles/001/test_demo.py) |
-| 002 | Governed MCP-style tool calling and authorization | [Article](articles/002/article.md) · [Code](articles/002/demo.py) · [Tests](articles/002/test_demo.py) |
-| 003 | Independent oversight and agent kill switches | [Article](articles/003/article.md) · [Code](articles/003/agent.py) · [Tests](articles/003/test_demo.py) |
-| 004 | Semantic context, tenant isolation, metric lineage | [Article](articles/004/article.md) · [Code](articles/004/agent.py) · [Tests](articles/004/test_demo.py) |
+| 001 | AI Agents Are Getting Authority. Enterprise Architecture Hasn't Caught Up. | [Read](articles/001/article.md) |
+| 002 | Building a Governed Agentic AI Runtime: MCP, Tool Calling, and Authorization | [Read](articles/002/article.md) |
+| 003 | Your AI Agent Should Never Control Its Own Kill Switch | [Read](articles/003/article.md) |
+| 004 | Your AI Agent Can Query the Data. Does It Understand What the Data Means? | [Read](articles/004/article.md) |
 
-## Quick start
+## Run the complete code labs
 
-Python 3.10+ is recommended. All committed demos use the standard library.
+Each lab is self-contained, uses Python 3.10+ and the standard library, and has a dedicated README, command-line demo, and test suite.
+
+| Lab | What it demonstrates | Documentation |
+|---|---|---|
+| [001 — Delegated Authority](examples/001-delegated-authority/) | SQLite-backed grants, amount limits, revocation, atomic approval, idempotency, audit | [README](examples/001-delegated-authority/README.md) |
+| [002 — Governed Tools](examples/002-governed-tools/) | Tool schemas, trusted principal, tenant isolation, scope checks, approval limits, audit | [README](examples/002-governed-tools/README.md) |
+| [003 — Independent Oversight](examples/003-independent-oversight/) | Task supervision, stop/revoke, task-bound capabilities, durable replay protection | [README](examples/003-independent-oversight/README.md) |
+| [004 — Semantic Context](examples/004-semantic-context/) | Governed metric definitions, classification, tenant isolation, source lineage | [README](examples/004-semantic-context/README.md) |
+
+Clone and run:
 
 ```bash
-python articles/001/demo.py
-python articles/002/demo.py
-python articles/003/agent.py
-python articles/004/agent.py
+git clone https://github.com/vshalsh/agentic-ai-semantic-context.git
+cd agentic-ai-semantic-context
+
+python examples/001-delegated-authority/demo.py
+python examples/002-governed-tools/demo.py
+python examples/003-independent-oversight/demo.py
+python examples/004-semantic-context/demo.py
 ```
 
-Run tests from within each article directory:
+Run the complete suite from the repository root:
 
 ```bash
-cd articles/001 && python -m unittest -v test_demo.py
-cd ../002 && python -m unittest -v test_demo.py
-cd ../003 && python -m unittest -v test_demo.py
-cd ../004 && python -m unittest -v test_demo.py
+python scripts/run_all_tests.py
 ```
 
-GitHub Actions runs the same test suites on pushes and pull requests.
+GitHub Actions also runs the suite on pushes and pull requests.
 
-## Scope and provenance
+## Repository structure
 
-Articles 001 and 002 are **reconstructed manuscripts**, not recovered verbatim originals. Articles 003 and 004 preserve the available Markdown drafts. The committed 003/004 Python implementations are **simplified self-contained companions** and are not byte-identical to the previously generated downloadable ZIP.
+```text
+.
+├── articles/
+│   ├── 001/article.md
+│   ├── 002/article.md
+│   ├── 003/article.md
+│   └── 004/article.md
+├── examples/
+│   ├── 001-delegated-authority/  # service, CLI demo, tests, README
+│   ├── 002-governed-tools/       # service, CLI demo, tests, README
+│   ├── 003-independent-oversight/# supervisor, CLI demo, tests, README
+│   └── 004-semantic-context/     # service, CLI demo, tests, README
+├── scripts/run_all_tests.py
+├── .github/workflows/python-tests.yml
+└── LICENSE
+```
 
-The tool examples illustrate MCP-style boundaries, but **are not full MCP protocol servers**. They intentionally do not require cloud credentials, paid APIs, or external databases. Do not interpret them as production-ready enterprise identity, security, audit, or distributed transaction systems.
+## Important boundaries
 
-## Security and licensing
+These are **complete runnable educational labs**, not production deployments. They do not depend on external APIs, hosted LLMs, credentials, or paid services. The tool interfaces demonstrate MCP-inspired governance but are **not MCP protocol servers**. Integration with a real MCP SDK, OIDC, an external ERP, a policy engine, and production telemetry requires additional engineering.
 
-Never commit API keys, production records, or credentials. No open-source license has been selected; all rights reserved until one is added.
+Articles 001 and 002 are reconstructed manuscripts, rather than the original unavailable drafts. The code labs are maintained separately from the publication text. Older exploratory code remains in `articles/*` for reference; use `examples/*` for the documented, extended demonstrations.
+
+## License
+
+The repository's original code and documentation are provided under the [MIT License](LICENSE). Third-party source material and linked references retain their respective rights.
